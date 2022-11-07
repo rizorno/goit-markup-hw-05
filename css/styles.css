@@ -217,7 +217,7 @@ body {
 }
 
 .lower .social.address {
-  padding-top: 15px;
+  padding-top: 12px;
 }
 
 .lower .social.list {
@@ -315,11 +315,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+
+  width: 100%;
+  height: 100%;
 
   display: flex;
-  z-index: 2;
+  z-index: 100;
 
   background-color: rgba(0, 0, 0, 0.2);
 
@@ -336,16 +337,19 @@ body {
 .section.hero .modal {
   position: relative;
 
-  width: 528px;
-  height: 581px;
+  max-width: 528px;
+  width: 100%;
+  max-height: 581px;
+  height: 100%;
+  overflow: auto;
 
   margin: auto;
 
   background-color: var(--background-global);
 
-  border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .section.hero .modal-text {
@@ -467,11 +471,9 @@ body {
 
 .section.service .text {
   position: absolute;
-  top: 100%;
   left: 0;
+  bottom: 0;
   width: 100%;
-  transform: translateY(-100%);
-  z-index: 1;
 
   color: var(--color-primery-white);
   background-color: rgba(47, 48, 58, 0.8);
@@ -482,8 +484,7 @@ body {
   text-transform: uppercase;
 
   margin: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding: 27px 5px;
 }
 
 /* Команда */
@@ -662,6 +663,9 @@ body {
 
 .text-hover {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 
   background-color: var(--hover-text);
   color: var(--color-primery-white);

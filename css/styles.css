@@ -324,13 +324,14 @@ body {
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity var(--transition);
+  transition: scale var(--transition), opacity var(--transition);
 }
 
 .section.hero .is-hidden {
   visibility: inherit;
   opacity: 0;
   pointer-events: none;
+  scale: 0;
 }
 
 .section.hero .modal {
